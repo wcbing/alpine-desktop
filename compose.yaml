@@ -1,0 +1,13 @@
+services:
+  alpine-desktop:
+    container_name: alpine-desktop
+    image: wcbing/alpine-desktop:latest
+    restart: unless-stopped
+    ports:
+      - 3389:3389
+    # environment:
+    #   RDP_USER: user
+    #   RDP_PASSWORD: password
+    volumes:
+      - /etc/hostname:/etc/hostname:ro
+      # - /home/user/:/home/user/

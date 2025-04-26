@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xsettings" version="1.0">
+  <property name="Gtk" type="empty">
+    <property name="ButtonImages" type="bool" value="true"/>
+    <property name="MenuImages" type="bool" value="true"/>
+  </property>
+  <property name="Net" type="empty">
+    <property name="IconThemeName" type="string" value="adwaita-xfce"/>
+  </property>
+</channel>
