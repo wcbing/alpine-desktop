@@ -1,0 +1,10 @@
+FROM alpine:latest
+
+RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.cernet.edu.cn/alpine#g' /etc/apk/repositories && \
+    apk add --no-cache alpine-conf xrdp xorgxrdp font-noto-cjk adwaita-xfce-icon-theme && \
+    setup-desktop xfce
+
+EXPOSE 3389
+
+RUN echo "root:password" | chpasswd
+CMD /usr/sbin/xrdp-sesman && /usr/sbin/xrdp --nodaemon
